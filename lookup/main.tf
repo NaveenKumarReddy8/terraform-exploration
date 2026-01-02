@@ -6,8 +6,8 @@ variable "mydict" {
 }
 
 variable "my_list" {
-  type = list(string)
-  default = [ "Luffy", "Naruto", "Zoro" ]
+  type    = list(string)
+  default = ["Luffy", "Naruto", "Zoro"]
 }
 
 output "name" {
@@ -25,5 +25,5 @@ output "anime_names" {
 resource "local_file" "name" {
   for_each = toset(var.my_list)
   filename = "${each.value}.txt"
-  content = "I am ${each.value}"
+  content  = "I am ${each.value}"
 }

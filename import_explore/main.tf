@@ -13,6 +13,6 @@ provider "aws" {
 
 
 import {
-    to = aws_s3_bucket.mys3
-    id = "terraform-backend-naveen-pemmana"
+  to = aws_s3_bucket.mys3
+  id = "terraform-backend-naveen-pemmana"
 }
