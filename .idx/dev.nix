@@ -12,7 +12,9 @@
   ];
 
   # Sets environment variables in the workspace
-  env = {};
+  env = {
+    TF_PLUGIN_CACHE_DIR = "/home/user/.terraform.d/plugin-cache";
+  };
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
@@ -42,6 +44,7 @@
       onCreate = {
         # Example: install JS dependencies from NPM
         # npm-install = "npm install";
+        create-tf-cache-dir = "mkdir -p /home/user/.terraform.d/plugin-cache";
       };
       # Runs when the workspace is (re)started
       onStart = {
